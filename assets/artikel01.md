@@ -7,7 +7,7 @@
 _Oleh Faishal Umar Al-Amin, Mahasiswa Universitas Ahmad Dahlan Yogyakarta_
 
 ---
-![gambar teknologi](../img/tekno%201.webp)
+
 Di masa sekarang,kita semua pasti tahu bahwa kemajuan teknologi sangat pesat kemajuan ini tentunya membawa banyak perubahan terhadap kebudayaan di Indonesia.Tidak bisa di pungkiri bahwa kemajuan teknologi informasi ini memang harus terjadi di Negara Indonesia ini, agar Negara Indonesia tidak kalah saing dengan Negara lain.
 Pesatnya perkembangan teknologi informasi ini memang membawa banyak pengaruh positive untuk manusia di dunia terutama di Indonesia.
 Beberapa pengaruh positive perkembangan teknologi informasi diantarnya :
