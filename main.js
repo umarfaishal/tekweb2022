@@ -3,8 +3,8 @@ Vue.createApp({
       return {
         header: {
           nama: "Faishal Umar Al-Amin",
-          description: '2011016067 | Sistem Informasi 2020',
-          imageprofile: "https://raw.githubusercontent.com/umarfaishal/tekweb2022/master/img/me.png",
+          description: 'Bersabarlah dalam menghadapi cobaan, karena kalau sedikit namanya cobain',
+          imageprofile: "https://raw.githubusercontent.com/umarfaishal/tekweb2022/master/img/poto.png",
         },
         social: {
             ig: {
