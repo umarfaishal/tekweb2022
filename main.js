@@ -1,37 +1,44 @@
+let apiUrl = "https://myapi.umarfaishal.my.id/index.php/";
+
 Vue.createApp({
     data() {
       return {
-        header: {
-          nama: "Faishal Umar Al-Amin",
-          description: 'Bersabarlah dalam menghadapi cobaan, karena kalau sedikit namanya cobain',
-          imageprofile: "https://raw.githubusercontent.com/umarfaishal/tekweb2022/master/img/poto.png",
-        },
-        social: {
-            ig: {
-              url: "https://instagram.com/umarfaishall?utm_medium=copy_link",
-              title: "umarfaishall",
-            },
-            fb: {
-              url: "https://www.facebook.com/faishal.umar.73",
-              title: "Umar Al-Amin",
-            },
-            mail: {
-              url: "mailto:faishal.umar2002@gmail.com",
-              title: "Faishal Umar",
-            },
+          message:"Hallo",
+          header: {
           },
-
           data_artikel: [],
           article: null,
         };
       },
       methods: {
+        getHeaderData() 
+        {
+          axios 
+          .get(apiUrl + "users/1")
+          .then((res) => {
+            this.header = res.data;
+            this.getUsers();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        },
+        getPortofolioData() 
+        {
+          axios 
+          .get(apiUrl + "portofolio/1")
+          .then((res) => {
+            this.portofolio = res.data;
+            this.getPortofolio();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        },
         getArticle() 
         {
           axios 
-          .get(
-            "https://raw.githubusercontent.com/umarfaishal/tekweb2022/master/assets/articles.json"
-          )
+          .get(apiUrl + "article")
           .then((res) => {
             console.log(res.data);
             this.data_artikel = res.data;
@@ -62,23 +69,11 @@ Vue.createApp({
         }
       },
       beforeMount() {
+        this.getHeaderData(),
+        this.getPortofolioData(),
         this.getArticle(),
         this.getMarkdown()
       },
 }).mount("#arc");
          
-  $('.skill-per').each(function() {
-    var $this = $(this);
-    var per = $this.attr('per');
-    $this.css("width",per+'%');
-    $({animatedValue: 0}).animate({animatedValue: per}, {
-      duration: 1000,
-      step: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      },
-      complete: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      }
-    });
- });
  
